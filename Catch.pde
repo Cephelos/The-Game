@@ -3,13 +3,12 @@
 
   void CatchScene()
   {
-    size( 800, 800 ); 
 
-    Catch.special1 = random(0, 800);
+
+    Catch.special1 = (int)random(50,100);
     Catch.size1 = 00;
     Catch.size2 = 30;
     Catch.posy = 50;
-    Catch.special1 = 0;
     Catch.check1 = 0;
     Catch.check2 = 0;
     Catch.check3 = 0;
@@ -22,16 +21,15 @@
 
   void CatchRun()
   {
- 
-
+    
       
       background( 0, 0, 0); 
 
     {
 
-        Catch.special1 += 1;
+        Catch.check1 += 1;
  
-        if(Catch.special1 == (int)random(50,85))
+        if(Catch.check1 == Catch.special1)
         {
           Catch.size2 = 0;
         }

@@ -2,12 +2,12 @@
 void dodgeBoxScene(){
   
   dodgeBox.bool1 = false;
-  size(800,800);
+
   dodgeBox.posx = 100;  
   dodgeBox.posy=725;  
   dodgeBox.spdx=0; 
   dodgeBox.spdy=0;
-  dodgeBox.posx2=random(1300, 3700);
+  dodgeBox.posx2=random(1300, 3500);
   dodgeBox.posy2 = 625; 
   dodgeBox.spdy2 = 0;
    win = 0;

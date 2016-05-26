@@ -2,7 +2,7 @@
 
 void CutLogScene(){
   noStroke();
-  size(800,800);
+
   CutLog.posx = 270;
   CutLog.posy = 250;
   CutLog.size1 = 500;

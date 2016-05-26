@@ -1,7 +1,7 @@
 
 void JumpOnFoeScene(){
   noStroke();
-  size(800,800);
+
   JumpOnFoe.posx = 100;
   JumpOnFoe.posy = height*4/5 - 120;
   

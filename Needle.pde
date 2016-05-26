@@ -5,7 +5,7 @@
   {
  
     frameRate(gameSpeed);
-    Needle.special1 = random(50, 550);
+    Needle.special1 = random(200, 400);
     noStroke();
     Needle.posx = 700;
     Needle.posy = 500;
@@ -31,11 +31,11 @@
        {
         if(Needle.check2 == 1)
         {
-          Needle.posy -= 1.5;
+          Needle.posy -= 1.7;
         }
         else if(Needle.check2 == 2) 
         {
-          Needle.posy += 1.5;
+          Needle.posy += 1.7;
         }
         else
         {
@@ -49,7 +49,7 @@
        }
        if(win == 0)
        {
-         Needle.posx-= 1.5;
+         Needle.posx-= 2;
        }
        if(win == 1 && Needle.posx > 50)
        {
