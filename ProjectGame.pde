@@ -8,7 +8,7 @@ int score, win, lives = 4;
 int transcount = 5;
 
 
-Game CutLog, JumpOnFoe, MashButton, dodgeBox, Needle, Catch, Chop, InputCombo;
+Game CutLog, JumpOnFoe, MashButton, dodgeBox, Needle, Catch, Chop, InputCombo, Pick;
 
 class Game{
   
@@ -64,6 +64,10 @@ void setup(){
   InputCombo.gamenum = 8;
   games.add(InputCombo);
   
+  Pick = new Game();
+  Pick.gamenum = 9;
+  games.add(Pick);
+  
   
   
   
@@ -93,7 +97,7 @@ textAlign(LEFT);
           frameRate(gameSpeed);
   if(trans == false){
   if(init == true){
-    curGame = 8;//(int)random(1,9);
+    curGame = (int)random(1,9);
   if(curGame == 1) CutLogScene();
   if(curGame == 2) JumpOnFoeScene();
   if(curGame == 3) MashButtonScene();
@@ -102,6 +106,7 @@ textAlign(LEFT);
   if(curGame == 6) CatchScene();
   if(curGame == 7) ChopScene();
   if(curGame == 8) InputComboScene();
+ //if(curGame == 9) PickScene();
     init = false;
     
   }
@@ -115,6 +120,7 @@ textAlign(LEFT);
   if(curGame == 6) CatchRun();
   if(curGame == 7) ChopRun();
   if(curGame == 8) InputComboRun();
+  //if(curGame == 9) PickRun();
   timer++;
 
   text(countdown, 10 , 10);
@@ -160,9 +166,9 @@ textAlign(LEFT);
     textSize(12);
   trans = false;
   init = true;
-  countdown = 4;
+  countdown = 5;
   transcount = 5;
-  gameSpeed = gameSpeed * 1.01;
+  gameSpeed = gameSpeed * 1.03;
   if(lives == 0) exit();
   }
   }
@@ -174,8 +180,8 @@ textAlign(LEFT);
 
 void keyPressed(){
   
-  if((CutLog.posx == 270 || CutLog.posx == 250) && key == 'a'){ CutLog.posx2 = -20; CutLog.posy  += 12;}
-  if(CutLog.posx == 20 && key == 'd'){ CutLog.posx2 = 20; CutLog.posy += 12;}
+  if((CutLog.posx == 270 || CutLog.posx == 250) && key == 'a'){ CutLog.posx2 = -20; CutLog.posy  += 10;}
+  if(CutLog.posx == 20 && key == 'd'){ CutLog.posx2 = 20; CutLog.posy += 10;}
   
   if(key == 'a') JumpOnFoe.spdx = -4;
   else if(key == 'd') JumpOnFoe.spdx = 4;
@@ -199,11 +205,13 @@ void keyPressed(){
             Needle.check2 = 2;
 
           }
+
+    
+}
           
   
             
             
-}
 
 void keyReleased(){
   

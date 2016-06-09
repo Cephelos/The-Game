@@ -4,7 +4,7 @@
 
 void MashButtonScene(){ 
 
-  MashButton.size1 = 350;
+  MashButton.size1 = 300;
   win = 0;
   fill(255);
 
